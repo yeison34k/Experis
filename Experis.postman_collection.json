@@ -1,0 +1,106 @@
+{
+	"info": {
+		"_postman_id": "7171b878-29d6-4ddf-8f56-9f0fb45e6152",
+		"name": "Experis",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "products",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"filter\": \"\",\r\n   \"marca\": \"\",\r\n    \"start\": -9223372036854775807,  \r\n    \"limit\": 9223372036854775807,\r\n\t\"total\": 10,\r\n    \"currentPage\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8990/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8990",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "crate-shopping-cart",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"shoppingCart\": {\r\n        \"clientName\": \"my_cart\",\t\r\n        \"already_paid\": false,\r\n        \"products\": []\r\n    },\r\n    \"products\": [\r\n        {\r\n            \"id\": \"61008324f5b8903e4ebb6929\",\r\n            \"nombre\":\"Htc One Mini 2 Remix M8\",\r\n            \"marca\":\"HTC\",\r\n            \"precio\":\"100000\",\r\n            \"stock\":\"2\",\r\n            \"estado\":\"Usado\",\r\n            \"porcentaje\":\"0\",\r\n            \"descuento\":\"15\"\r\n        },\r\n        {\r\n            \"id\":\"61008324f5b8903e4ebb6921\",\r\n            \"nombre\":\"Htc One M7 Negro\",\r\n            \"marca\":\"HTC\",\r\n            \"precio\":\"349000\",\r\n            \"stock\":\"5\",\r\n            \"estado\":\"Usado\",\r\n            \"porcentaje\":\"0\",\r\n            \"descuento\":\"5\"\r\n        }\r\n    ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8990/crate-shopping-cart",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8990",
+					"path": [
+						"crate-shopping-cart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-products-shopping-cart",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8990/get-products-shopping-cart/my_cart",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8990",
+					"path": [
+						"get-products-shopping-cart",
+						"my_cart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete-products/my_cart",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8990/delete-products/my_cart",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8990",
+					"path": [
+						"delete-products",
+						"my_cart"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
