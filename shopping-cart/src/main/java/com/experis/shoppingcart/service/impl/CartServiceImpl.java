@@ -56,7 +56,10 @@ public class CartServiceImpl implements ShoppingCartService {
 	@Override
 	public List<ProductEntity> getProductsShoppingCard(String myCart) {
 		Optional<ShoppingCart> res = repoCar.findByClientName(myCart);
-		return res.get().getProducts();
+		if(res.isPresent())
+			return res.get().getProducts();
+		
+		return null;
 	}
 	
 	@Override
